@@ -1,0 +1,28 @@
+#M8P5
+f = open("students.txt", "r")
+student_count = 0
+total_tuition = 0.0
+print("Student Tuition Report:")
+print()
+name = str(f.readline().rstrip('\n'))
+while name != "":
+  code = str(f.readline().rstrip('\n'))
+  credits = float(f.readline())
+  if code == "I":
+    cost_per_credit = 250.00
+  else:
+    cost_per_credit = 500.00
+  tuition = credits * cost_per_credit
+  total_tuition = total_tuition + tuition
+  student_count = student_count + 1
+  clean_tuition = format(tuition, ",.2f")
+  print("Student:      ", name)
+  print("Credits Taken:", int(credits))
+  print("Tuition Owed: ", "$" + clean_tuition)
+  print() 
+  name = str(f.readline().rstrip('\n'))
+f.close()
+clean_total = format(total_tuition, ",.2f")
+print()
+print("Sum of All Tuition Owed:", "$" + clean_total)
+print("Total Number of Students:", student_count)

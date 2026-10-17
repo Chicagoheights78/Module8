@@ -1,0 +1,9 @@
+Warpcore
+10
+500000000.00
+Phaser
+2
+10.00
+Tricorder
+4
+8.00

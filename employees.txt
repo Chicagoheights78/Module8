@@ -1,0 +1,10 @@
+Skywalker
+500000.00
+Patton
+75000.00
+Livermore
+45000.00
+Wayne
+120000.00
+Stark
+30000.00

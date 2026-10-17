@@ -1,0 +1,24 @@
+#M8P3
+f = open("employees.txt", "r")
+total_bonuses = 0.0
+print("Employee Bonus Report:")
+print()
+lastname = str(f.readline().rstrip('\n'))
+while lastname != "":
+  salary = float(f.readline())
+  if salary >= 100000.00:
+    rate = 0.20
+  elif salary >= 50000.00:
+    rate = 0.15
+  else:
+    rate = 0.10
+  bonus = salary * rate
+  total_bonuses = total_bonuses + bonus
+  clean_salary = format(salary, ",.2f")
+  clean_bonus = format(bonus, ",.2f")
+  print(lastname, "  Salary: $" + clean_salary, "  Bonus: $" + clean_bonus)
+  lastname = str(f.readline().rstrip('\n'))
+f.close()
+clean_total = format(total_bonuses, ",.2f")
+print()
+print("Total of all bonuses paid out: $" + clean_total)

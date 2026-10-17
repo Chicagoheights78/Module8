@@ -1,0 +1,21 @@
+#M8P1
+p = float(input("Enter principal amount: "))
+print()
+r = float(input("Enter interest rate: "))
+print()
+start_p = p
+print("Formatted output")
+print()
+print("Year   Beginning      Ending")
+print("       Balance        Balance")
+print()
+for count in range (1, 6, 1):
+  i = p * r
+  eb = p + i
+  clean_p = format(p, ",.2f")
+  clean_eb = format(eb, ",.2f")
+  print(count, "    $" + clean_p, "    $" + clean_eb)
+  p = eb
+total_interest = p - start_p
+clean_total = format(total_interest, ",.2f")
+print("\nTotal interest earned: ", "$" + clean_total)

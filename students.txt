@@ -1,0 +1,12 @@
+Chesterfield
+I
+12
+Palpatine
+I
+10
+Zhukov
+O
+12
+Rommel
+O
+16

@@ -1,0 +1,25 @@
+#M8P4
+f = open("items.txt", "r")
+c = 0.0
+totp_ex = 0.0
+item = str(f.readline().rstrip('\n'))
+while item != "":
+  qty = float(f.readline())
+  price = float(f.readline())
+  ep = qty * price
+  totp_ex = totp_ex + ep
+  c = c + 1
+  clean_price = format(price, ",.2f")
+  clean_ep = format(ep, ",.2f")
+  print("Item:     ", item)
+  print("Quantity:   ", qty)
+  print("Price:     ", "$" + clean_price)     
+  print("Extended Price: ", "$" + clean_ep) 
+  item = str(f.readline().rstrip('\n'))
+f.close()
+clean_totp = format(totp_ex, ",.2f")
+avg = totp_ex / c
+clean_avg = format(avg, ",.2f")
+print("Total Extended Prices: ", "$" + clean_totp) 
+print("Number of Orders:    ", int(c))   
+print("Average Order:     ", "$" + clean_avg) 
